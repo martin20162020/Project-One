@@ -1,0 +1,173 @@
+body {
+    margin: 0px;
+    height: 100%;
+    background-color: rgb(167, 168, 168);
+}
+
+/* headings */
+
+h1, 
+h2, 
+h3 {
+    font-family:'PT Serif', serif;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    flex-wrap:wrap;
+    background-color: teal;
+    font-family:'PT Serif', serif;
+    padding: 15px;
+}
+
+a, li {
+    flex: 1 1 auto;
+    text-decoration: none;
+    list-style-type: none;
+    color: white;
+    font-size: 14px;
+    display:inline-flex;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.logo{
+    align-items: flex-start;
+    padding-left: 100px;
+    font-size: 25px;
+    font-weight: normal;
+    
+}
+
+/* Top Section */
+.top {
+    background-color: rgb(218, 224, 226);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 50px 0 100px;
+}
+
+
+.heading span {
+    /* I chose display:block so "CUSTOMIZE HERE" would be in a new line - is there a different way to do this? */
+    display:block;
+}
+
+.heading {
+    text-align: center;
+    padding: 0px 20px 0 20px;
+    line-height: 30px;
+    font-size:inherit;
+    /* I chose height to be 30 viewport height because I couldn't figure out another way to make the image shrink */
+    height: 50vh;
+    max-width: 30vw;
+    align-self:center;
+    flex-basis: 40%;
+    flex-shrink: 1;
+}
+
+.top img{
+    max-width: 66vw;
+    align-self: stretch;
+    flex-basis:60%;
+    flex-shrink: 2;
+}
+
+/* Middle Section */
+.middle {
+    background-color: rgb(218, 224, 226);
+    display:flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin:0;
+    padding: 0 25px 0 120px;
+}
+
+.middle-main {
+    flex: 2 1 100px;
+}
+
+aside {
+    flex: 1;
+    padding-left: 40px;
+}
+
+aside span {
+    display:block;
+    text-align: right;
+    padding: 30px;
+}
+
+/* Bottom Section */
+.bottom {
+    background-color: rgb(167, 168, 168);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 50px 20px 100px;
+    padding: 0 10px;
+}
+
+.bottom-page h3 {
+    padding-left: 110px;
+}
+
+.card{
+    padding-top: 10px;
+    flex: 1 2 100px;
+}
+
+.card img{
+    max-height: 50%;
+    height: 150px;
+    width: 200px;
+}
+
+button {
+    background-color: grey;
+    color:white;
+    border: 0 solid grey;
+    width: 110px;
+    height: 20px;
+}
+
+@media screen and (max-width: 1200px){
+    section{
+        display:flex;
+        flex-wrap: wrap;
+        flex-direction:column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .top img {
+        align-self: center;
+
+    }
+
+    aside{
+        padding:0;
+        margin:0;
+        align-self:center;
+    }
+
+    nav{
+        height: 30px;
+        display:flex;
+    }
+
+    li a{
+        font-size: 10px;
+        align-self: flex-end;
+        padding:0;
+        margin:0;
+        
+    }
+
+    .logo{
+        font-size: 12px;
+        padding:0;
+    }
+}
